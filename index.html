@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Learning AJAX</title>
+  </head>
+  <script>
+
+    function process()
+    {
+      if((document.getElementById("tempButton") != null) && (document.getElementById("tempInput")))
+      {
+        var btnTemp = document.getElementById('tempButton');
+        var txtTemp = document.getElementById('tempInput');
+      }
+      else
+      {
+        console.log("Doesn't Exist");
+      }
+
+      var request = new XMLHttpRequest();
+
+      request.onreadystatechange = function()
+      {
+        if(request.readyState === 4)
+        {
+          txtTemp.style.border = '1px solid green';
+
+          if(request.status === 200)
+          {
+            txtTemp.innerHTML = request.responseText;
+          }
+          else
+          {
+            txtTemp.style.border = '1px solid red';
+            txtTemp.innerHTML = 'An error occurred during your request: ' + request.status + ' ' + request.statusText;
+          }
+        }
+        else
+        {
+          txtTemp.style.border = '1px solid red';
+          txtTemp.innerHTML = 'An error occurred';
+        }
+      }
+
+    request.open('Get', 'Temp.txt');
+    btnTemp.addEventListener('click', function(){ this.style.display = none; request.send(); });
+
+    }
+  </script>
+  <body>
+
+    <div>
+      <input id="tempInput" type="text">
+      <button id="tempButton" onclick="process()">Submit</button>
+    </div>
+
+  </body>
+</html>

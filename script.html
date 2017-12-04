@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Script</title>
+  </head>
+
+  <script>
+
+  const input = "9121212129111229989" // Real input goes here
+
+  const toIntArray = function (ints)
+  {
+    return ints.split("").map(x => parseInt(x))
+  }
+
+  const inputArray = toIntArray(input)
+
+  const cyclicEqual = function (array, index, distance)
+  {
+    console.log(array[index])
+    console.log(array[(index+distance)% array.length] +"--"+ (index+distance)%array.length)
+
+    console.log(array[index] === array[(index + distance)% array.length])
+
+    return array[index] === array[(index + distance)% array.length]
+
+  }
+
+  const reducer1 = function (acc, cVal, cInd, arr)
+  {
+    console.log(acc +" "+ cVal +" "+ cInd +" "+ arr)
+
+    if(cyclicEqual(arr, cInd, 1))
+    {
+      console.log("**"+acc+"-"+cVal+"**")
+      var total = acc+cVal
+      console.log("total: "+total)
+      console.log("- - - - - - - - - - - - - - - - - - - -")
+      return acc + cVal
+    }
+    else
+    {
+      console.log("- - - - - - - - - - - - - - - - - - - -")
+      return acc
+    }
+  }
+
+  console.log(inputArray.reduce(reducer1, 0))
+
+  </script>
+
+  <body>
+
+  </body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Script 2</title>
+  </head>
+
+  <script>
+
+    var rowOne = [409, 194, 207, 470, 178, 454, 235, 333, 511, 103, 474, 293, 525, 372, 408, 428];
+    var rowTwo = [4321, 2786, 6683, 3921, 265, 262, 6206, 2207, 5712, 214, 6750, 2742, 777, 5297, 3764, 167];
+    var rowThree = [3536, 2675, 1298, 1069, 175, 145, 706, 2614, 4067, 4377, 146, 134, 1930, 3850, 213, 4151];
+    var rowFour = [2169, 1050, 3705, 2424, 614, 3253, 222, 3287, 3340, 2637, 61, 216, 2894, 247, 3905, 214];
+    var rowFive = [99, 797, 80, 683, 789, 92, 736, 318, 103, 153, 749, 631, 626, 367, 110, 805];
+    var rowSix = [2922, 1764, 178, 3420, 3246, 3456, 73, 2668, 3518, 1524, 273, 2237, 228, 1826, 182, 2312];
+    var rowSeven = [2304, 2058, 286, 2258, 1607, 2492, 2479, 164, 171, 663, 62, 144, 1195, 116, 2172, 1839];
+    var rowEight = [114, 170, 82, 50, 158, 111, 165, 164, 106, 70, 178, 87, 182, 101, 86, 168];
+    var rowNine = [121, 110, 51, 122, 92, 146, 13, 53, 34, 112, 44, 160, 56, 93, 82, 98];
+    var rowTen = [4682, 642, 397, 5208, 136, 4766, 180, 1673, 1263, 4757, 4680, 141, 4430, 1098, 188, 1451];
+    var rowEleven = [158, 712, 1382, 170, 550, 913, 191, 163, 459, 1197, 1488, 1337, 900, 1182, 1018, 337];
+    var rowTwelve = [4232, 236, 3835, 3847, 3881, 4180, 4204, 4030, 220, 1268, 251, 4739, 246, 3798, 1885, 3244];
+    var rowThirteen = [169, 1928, 3305, 167, 194, 3080, 2164, 192, 3073, 1848, 426, 2270, 3572, 3456, 217, 3269];
+    var rowFourteen = [140, 1005, 2063, 3048, 3742, 3361, 117, 93, 2695, 1529, 120, 3480, 3061, 150, 3383, 190];
+    var rowFifteen = [489, 732, 57, 75, 61, 797, 266, 593, 324, 475, 733, 737, 113, 68, 267, 141];
+    var rowSixteen = [3858, 202, 1141, 3458, 2507, 239, 199, 4400, 3713, 3980, 4170, 227, 3968, 1688, 4352, 4168];
+
+    function sortNumber(a,b)
+    {
+      return a - b;
+    }
+
+    rowOne.sort(sortNumber);
+    var rowOneCS = rowOne[15] - rowOne[0];
+
+    rowTwo.sort(sortNumber);
+    var rowTwoCS = rowTwo[15] - rowTwo[0];
+
+    rowThree.sort(sortNumber);
+    var rowThreeCS = rowThree[15] - rowThree[0];
+
+    rowFour.sort(sortNumber);
+    var rowFourCS = rowFour[15] - rowFour[0];
+
+    rowFive.sort(sortNumber);
+    var rowFiveCS = rowFive[15] - rowFive[0];
+
+    rowSix.sort(sortNumber);
+    var rowSixCS = rowSix[15] - rowSix[0];
+
+    rowSeven.sort(sortNumber);
+    var rowSevenCS = rowSeven[15] - rowSeven[0];
+
+    rowEight.sort(sortNumber);
+    var rowEightCS = rowEight[15] - rowEight[0];
+
+    rowNine.sort(sortNumber);
+    var rowNineCS = rowNine[15] - rowNine[0];
+
+    rowTen.sort(sortNumber);
+    var rowTenCS = rowTen[15] - rowTen[0];
+
+    rowEleven.sort(sortNumber);
+    var rowElevenCS = rowEleven[15] - rowEleven[0];
+
+    rowTwelve.sort(sortNumber);
+    var rowTwelveCS = rowTwelve[15] - rowTwelve[0];
+
+    rowThirteen.sort(sortNumber);
+    var rowThirteenCS = rowThirteen[15] - rowThirteen[0];
+
+    rowFourteen.sort(sortNumber);
+    var rowFourteenCS = rowFourteen[15] - rowFourteen[0];
+
+    rowFifteen.sort(sortNumber);
+    var rowFifteenCS = rowFifteen[15] - rowFifteen[0];
+
+    rowSixteen.sort(sortNumber);
+    var rowSixteenCS = rowSixteen[15] - rowSixteen[0];
+
+    varTotalCS = rowOneCS + rowTwoCS + rowThreeCS + rowFourCS + rowFiveCS + rowSixCS + rowSevenCS + rowEightCS + rowNineCS + rowTenCS + rowElevenCS + rowTwelveCS + rowThirteenCS + rowFourteenCS + rowFifteenCS + rowSixteenCS;
+
+    console.log(varTotalCS);
+
+
+
+  </script>
+
+  <body>
+
+  </body>
+</html>
