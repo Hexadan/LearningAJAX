@@ -2,10 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Script 2</title>
-  </head>
+    <title>Day 2 - Part 2</title>
 
-  <script>
+    <script>
 
     var rowOne = [409, 194, 207, 470, 178, 454, 235, 333, 511, 103, 474, 293, 525, 372, 408, 428];
     var rowTwo = [4321, 2786, 6683, 3921, 265, 262, 6206, 2207, 5712, 214, 6750, 2742, 777, 5297, 3764, 167];
@@ -24,71 +23,58 @@
     var rowFifteen = [489, 732, 57, 75, 61, 797, 266, 593, 324, 475, 733, 737, 113, 68, 267, 141];
     var rowSixteen = [3858, 202, 1141, 3458, 2507, 239, 199, 4400, 3713, 3980, 4170, 227, 3968, 1688, 4352, 4168];
 
-    var temp = [];
-
-    
-
-    function sortNumber(a,b)
+    function processArray(tempArray)
     {
-      return a - b;
+      var rowValue = 0;
+
+      for(var i=0; i < tempArray.length; i++)
+      {
+        for(var j=0; j < tempArray.length; j++)
+        {
+          if(tempArray[i] != tempArray[j])
+          {
+            if((tempArray[i] % tempArray[j]) == 0)
+            {
+              if(tempArray[i] > tempArray[j])
+              {
+                rowValue = tempArray[i] / tempArray[j];
+              }
+              else
+              {
+                rowValue = tempArray[j] / tempArray[i];
+              }
+            }
+          }
+        }
+      }
+
+      return rowValue;
     }
 
-    rowOne.sort(sortNumber);
-    var rowOneCS = rowOne[15] - rowOne[0];
+    var total = 0;
 
-    rowTwo.sort(sortNumber);
-    var rowTwoCS = rowTwo[15] - rowTwo[0];
+    total += processArray(rowOne);
+    total += processArray(rowTwo);
+    total += processArray(rowThree);
+    total += processArray(rowFour);
+    total += processArray(rowFive);
+    total += processArray(rowSix);
+    total += processArray(rowSeven);
+    total += processArray(rowEight);
+    total += processArray(rowNine);
+    total += processArray(rowTen);
+    total += processArray(rowEleven);
+    total += processArray(rowTwelve);
+    total += processArray(rowThirteen);
+    total += processArray(rowFourteen);
+    total += processArray(rowFifteen);
+    total += processArray(rowSixteen);
 
-    rowThree.sort(sortNumber);
-    var rowThreeCS = rowThree[15] - rowThree[0];
-
-    rowFour.sort(sortNumber);
-    var rowFourCS = rowFour[15] - rowFour[0];
-
-    rowFive.sort(sortNumber);
-    var rowFiveCS = rowFive[15] - rowFive[0];
-
-    rowSix.sort(sortNumber);
-    var rowSixCS = rowSix[15] - rowSix[0];
-
-    rowSeven.sort(sortNumber);
-    var rowSevenCS = rowSeven[15] - rowSeven[0];
-
-    rowEight.sort(sortNumber);
-    var rowEightCS = rowEight[15] - rowEight[0];
-
-    rowNine.sort(sortNumber);
-    var rowNineCS = rowNine[15] - rowNine[0];
-
-    rowTen.sort(sortNumber);
-    var rowTenCS = rowTen[15] - rowTen[0];
-
-    rowEleven.sort(sortNumber);
-    var rowElevenCS = rowEleven[15] - rowEleven[0];
-
-    rowTwelve.sort(sortNumber);
-    var rowTwelveCS = rowTwelve[15] - rowTwelve[0];
-
-    rowThirteen.sort(sortNumber);
-    var rowThirteenCS = rowThirteen[15] - rowThirteen[0];
-
-    rowFourteen.sort(sortNumber);
-    var rowFourteenCS = rowFourteen[15] - rowFourteen[0];
-
-    rowFifteen.sort(sortNumber);
-    var rowFifteenCS = rowFifteen[15] - rowFifteen[0];
-
-    rowSixteen.sort(sortNumber);
-    var rowSixteenCS = rowSixteen[15] - rowSixteen[0];
-
-    varTotalCS = rowOneCS + rowTwoCS + rowThreeCS + rowFourCS + rowFiveCS + rowSixCS + rowSevenCS + rowEightCS + rowNineCS + rowTenCS + rowElevenCS + rowTwelveCS + rowThirteenCS + rowFourteenCS + rowFifteenCS + rowSixteenCS;
-
-    console.log(varTotalCS);
+    console.log(total);
 
 
-
-  </script>
-
+    </script>
+  </head>
   <body>
 
   </body>
