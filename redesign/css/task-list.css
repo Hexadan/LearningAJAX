@@ -1,0 +1,64 @@
+.list-container
+{
+  display: grid;
+  grid-template-rows: 64px 56px 1fr 56px;
+  grid-template-areas:
+    "list-header"
+    "row-header"
+    "row-container"
+    "list-footer";
+
+  background-color: white;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  border-radius: 2px;
+}
+
+/* List Header */
+.list-header
+{
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 3fr 2fr;
+  grid-template-areas:
+    "list-type list-control . list-sort";
+
+  grid-area: list-header;
+  padding: 0 24px;
+  border-bottom: 1px #E0E0E0 solid;
+}
+
+.list-type
+{
+  grid-area: list-type;
+}
+
+.list-type p
+{
+  font-size: 25px;
+  margin: 0;
+}
+
+.list-control
+{
+  grid-area: list-control;
+}
+
+.list-sort
+{
+  grid-area: list-sort;
+}
+
+/* Row Header */
+.row-header
+{
+  grid-area: row-header;
+}
+
+.row-container
+{
+  grid-area: row-container;
+}
+
+.list-footer
+{
+  grid-area: list-footer;
+}
